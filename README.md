@@ -37,3 +37,19 @@ python main.py
 # Output
 
 The video files will be downloaded to the `downloads` directory, maintaining the folder structure from the `folders.json` file.
+
+# How to launch detached process
+
+If you need to connect to the remote machine via SSH and run the script in the background, you can use the following command:
+
+```bash
+nohup /home/stanislav_soldatov/kanal75/k75downloader/.venv/bin/python /home/stanislav_soldatov/kanal75/k75downloader/main.py > output.log 2>&1 &
+```
+
+Replace the path to the Python interpreter and the script with your actual paths.
+
+To check the output, you can use:
+
+```bash
+tail -f output.log
+```
